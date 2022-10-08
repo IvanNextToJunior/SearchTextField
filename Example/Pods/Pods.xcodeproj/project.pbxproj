@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		333FDE63D600C788DC69A96F775F01D0 /* SearchTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B15CB1D2CB3A255F7AF18A7411432C /* SearchTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C69354C28F162C700F024D5 /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69354B28F162C700F024D5 /* SearchItem.swift */; };
+		3C69354E28F1684100F024D5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69354D28F1684100F024D5 /* Direction.swift */; };
 		4C79512110BEB51B3547ED13A7C7269A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		51B87853A757F7B3042498F3FE2C566D /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476593343FDE12B48003B37B588302E3 /* SearchTextField.swift */; };
 		9E523A19F105F4BCCD4EA74D55DE6BDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -34,6 +36,8 @@
 		109DCB3179FF0EE3E357F6239981A078 /* Pods-SearchTextField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SearchTextField_Example-umbrella.h"; sourceTree = "<group>"; };
 		1348CD61AA5904C8B203616C6D1807FE /* SearchTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SearchTextField.xcconfig; sourceTree = "<group>"; };
 		39D4C6B9EFFCB8FF01B44C8333845001 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3C69354B28F162C700F024D5 /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
+		3C69354D28F1684100F024D5 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		3CD367E95910A3A1C18929894CA01D2A /* Pods-SearchTextField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SearchTextField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4296C73953F954239FCE10FF21B2F6AF /* Pods-SearchTextField_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SearchTextField_Example-Info.plist"; sourceTree = "<group>"; };
 		476593343FDE12B48003B37B588302E3 /* SearchTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchTextField.swift; path = SearchTextField/Classes/SearchTextField.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				476593343FDE12B48003B37B588302E3 /* SearchTextField.swift */,
+				3C69354B28F162C700F024D5 /* SearchItem.swift */,
+				3C69354D28F1684100F024D5 /* Direction.swift */,
 				CEBAC950272E863700E2E397 /* SearchTextFieldTableViewCell.swift */,
 				938B65339B1A965DAD951C6015BD66B7 /* Pod */,
 				27C2BDA4D24802E63480E7CFCE36F05E /* Support Files */,
@@ -293,8 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C69354C28F162C700F024D5 /* SearchItem.swift in Sources */,
 				F24CE8D8FECA0648DF1F1170267B2FA7 /* SearchTextField-dummy.m in Sources */,
 				51B87853A757F7B3042498F3FE2C566D /* SearchTextField.swift in Sources */,
+				3C69354E28F1684100F024D5 /* Direction.swift in Sources */,
 				CEBAC951272E863700E2E397 /* SearchTextFieldTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
