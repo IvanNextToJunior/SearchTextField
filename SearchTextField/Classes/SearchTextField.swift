@@ -142,17 +142,17 @@ open class SearchTextField: UITextField {
     // Private implementation
     
     fileprivate var tableView: UITableView?
-    fileprivate var shadowView: UIView?
+   var shadowView: UIView?
     fileprivate var direction: Direction = .down
-    fileprivate var fontConversionRate: CGFloat = 0.7
+     var fontConversionRate: CGFloat = 0.7
     fileprivate var keyboardFrame: CGRect?
     fileprivate var timer: Timer? = nil
     fileprivate var placeholderLabel: UILabel?
-    fileprivate static let cellIdentifier = "APSearchTextFieldCell"
+  static let cellIdentifier = "APSearchTextFieldCell"
     fileprivate let indicator = UIActivityIndicatorView(style: .gray)
     fileprivate var maxTableViewSize: CGFloat = 0
     
-    fileprivate var filteredResults = [SearchTextFieldItem]()
+   var filteredResults = [SearchTextFieldItem]()
     fileprivate var filterDataSource = [SearchTextFieldItem]() {
         didSet {
             filter(forceShowAll: forceNoFiltering)
@@ -540,7 +540,7 @@ open class SearchTextField: UITextField {
     }
     
     // Clean filtered results
-    fileprivate func clearResults() {
+ func clearResults() {
         filteredResults.removeAll()
         tableView?.removeFromSuperview()
     }
@@ -600,61 +600,4 @@ open class SearchTextField: UITextField {
         }
     }
 }
-
-extension SearchTextField: UITableViewDelegate, UITableViewDataSource {
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableView.isHidden = !interactedWith || (filteredResults.count == 0)
-        shadowView?.isHidden = !interactedWith || (filteredResults.count == 0)
-        
-        if maxNumberOfResults > 0 {
-            return min(filteredResults.count, maxNumberOfResults)
-        } else {
-            return filteredResults.count
-        }
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Self.cellIdentifier, for: indexPath) as! SearchTextFieldTableViewCell
-        
-        cell.backgroundColor = UIColor.clear
-        cell.margins = theme.cellMargins
-        cell.titleLabel.font = theme.font
-        cell.subtitleLabel.font = theme.font.withSize(theme.font.pointSize * fontConversionRate)
-        cell.titleLabel.textColor = theme.fontColor
-        cell.subtitleLabel.textColor = theme.subtitleFontColor
-        
-        cell.titleLabel.text = filteredResults[(indexPath as NSIndexPath).row].title
-        cell.subtitleLabel.text = filteredResults[(indexPath as NSIndexPath).row].subtitle
-        cell.titleLabel.attributedText = filteredResults[(indexPath as NSIndexPath).row].attributedTitle
-        cell.subtitleLabel.attributedText = filteredResults[(indexPath as NSIndexPath).row].attributedSubtitle
-
-        cell.titleLabel.numberOfLines = theme.titleUsesAutomaticHeight ? 0 : 1;
-        cell.subtitleLabel.numberOfLines = theme.subtitleUsesAutomaticHeight ? 0 : 1;
-
-        cell.imageView?.image = filteredResults[(indexPath as NSIndexPath).row].image
-        
-        cell.selectionStyle = .none
-        
-        return cell
-    }
-    
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        (theme.titleUsesAutomaticHeight || theme.subtitleUsesAutomaticHeight)
-                ? UITableView.automaticDimension
-                : theme.cellHeight
-    }
-    
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if itemSelectionHandler == nil {
-            text = filteredResults[(indexPath as NSIndexPath).row].title
-        } else {
-            let index = indexPath.row
-            itemSelectionHandler!(filteredResults, index)
-        }
-        
-        clearResults()
-    }
-}
-
-
 

@@ -6,8 +6,7 @@
 //
 
 import UIKit
-// Filter Item
-
+ 
 @objc(APSearchTextFieldItem)
 open class SearchTextFieldItem : NSObject {
 

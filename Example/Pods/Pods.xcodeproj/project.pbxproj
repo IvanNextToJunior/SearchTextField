@@ -11,6 +11,8 @@
 		3C69354C28F162C700F024D5 /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69354B28F162C700F024D5 /* SearchItem.swift */; };
 		3C69354E28F1684100F024D5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69354D28F1684100F024D5 /* Direction.swift */; };
 		3C69355228F5597100F024D5 /* SearchTextfieldTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69355128F5597000F024D5 /* SearchTextfieldTheme.swift */; };
+		3C69355628F5609900F024D5 /* SearchTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69355528F5609900F024D5 /* SearchTextFieldExtension.swift */; };
+		3C69355828F5682200F024D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69355728F5682200F024D5 /* ViewController.swift */; };
 		4C79512110BEB51B3547ED13A7C7269A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		51B87853A757F7B3042498F3FE2C566D /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476593343FDE12B48003B37B588302E3 /* SearchTextField.swift */; };
 		9E523A19F105F4BCCD4EA74D55DE6BDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -40,6 +42,8 @@
 		3C69354B28F162C700F024D5 /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
 		3C69354D28F1684100F024D5 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		3C69355128F5597000F024D5 /* SearchTextfieldTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextfieldTheme.swift; sourceTree = "<group>"; };
+		3C69355528F5609900F024D5 /* SearchTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFieldExtension.swift; sourceTree = "<group>"; };
+		3C69355728F5682200F024D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3CD367E95910A3A1C18929894CA01D2A /* Pods-SearchTextField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SearchTextField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4296C73953F954239FCE10FF21B2F6AF /* Pods-SearchTextField_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SearchTextField_Example-Info.plist"; sourceTree = "<group>"; };
 		476593343FDE12B48003B37B588302E3 /* SearchTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchTextField.swift; path = SearchTextField/Classes/SearchTextField.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				476593343FDE12B48003B37B588302E3 /* SearchTextField.swift */,
+				3C69355728F5682200F024D5 /* ViewController.swift */,
+				3C69355528F5609900F024D5 /* SearchTextFieldExtension.swift */,
 				3C69355128F5597000F024D5 /* SearchTextfieldTheme.swift */,
 				3C69354B28F162C700F024D5 /* SearchItem.swift */,
 				3C69354D28F1684100F024D5 /* Direction.swift */,
@@ -304,9 +310,11 @@
 			files = (
 				3C69354C28F162C700F024D5 /* SearchItem.swift in Sources */,
 				F24CE8D8FECA0648DF1F1170267B2FA7 /* SearchTextField-dummy.m in Sources */,
+				3C69355628F5609900F024D5 /* SearchTextFieldExtension.swift in Sources */,
 				51B87853A757F7B3042498F3FE2C566D /* SearchTextField.swift in Sources */,
 				3C69355228F5597100F024D5 /* SearchTextfieldTheme.swift in Sources */,
 				3C69354E28F1684100F024D5 /* Direction.swift in Sources */,
+				3C69355828F5682200F024D5 /* ViewController.swift in Sources */,
 				CEBAC951272E863700E2E397 /* SearchTextFieldTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
